@@ -1,0 +1,29 @@
+package Guia_academia.model;
+
+
+public class Aluno {
+    private String nome;
+    private String cpf;
+    private Plano plano;
+    private FichaTreino ficha;
+
+    /*Aqui definimos as informações que um aluno possui:
+    nome, CPF, um plano e uma ficha de treino.*/
+
+    public Aluno(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
+    /*Esse é o construtor, ou seja, quando criamos um novo aluno, exigimos nome e CPF.*/
+
+    public String getNome() { return nome; }
+    public String getCpf() { return cpf; }
+    public Plano getPlano() { return plano; }
+    public FichaTreino getFicha() { return ficha; }
+
+    public void setPlano(Plano plano) { this.plano = plano; }
+    public void setFicha(FichaTreino ficha) { this.ficha = ficha; }
+}
+
+/*Os getters pegam os dados. Os setters servem para modificar o plano e a ficha do aluno.*/
