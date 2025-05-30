@@ -1,0 +1,33 @@
+package Guia_academia.repository;
+
+
+import Guia_academia.model.Aluno;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlunoRepository {
+    private List<Aluno> alunos = new ArrayList<>();
+
+    public void salvar(Aluno aluno) {
+        alunos.add(aluno);
+    }
+
+    public void remover(String cpf) {
+        alunos.removeIf(a -> a.getCpf().equals(cpf));
+    }
+
+    public Aluno buscarPorCpf(String cpf) {
+        for (Aluno a : alunos) {
+            if (a.getCpf().equals(cpf)) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+    public List<Aluno> listarTodos() {
+        return alunos;
+    }
+}
+
