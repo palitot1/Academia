@@ -1,27 +1,25 @@
 package Guia_academia.model;
 
 
-import java.util.ArrayList;
-import java.util.List;
+public class Plano {
+    private String nome;
+    private String tipo;
+    private boolean ativo;
 
-/*Importamos List e ArrayList para guardar os exercícios de treino.*/
+    /*Um plano tem nome ("Plano Ouro"), tipo ("Mensal") e um status ativo (true/false).*/
 
-public class FichaTreino {
-    private List<String> exercicios = new ArrayList<>();
-
-    /*A ficha é basicamente uma lista de exercícios.*/
-
-    public void adicionarExercicio(String exercicio) {
-        exercicios.add(exercicio);
+    public Plano(String nome, String tipo, boolean ativo) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.ativo = ativo;
     }
 
-    public List<String> getExercicios() {
-        return exercicios;
-    }
+    public String getNome() { return nome; }
+    public String getTipo() { return tipo; }
+    public boolean isAtivo() { return ativo; }
 }
 
-/*Com adicionarExercicio, a gente adiciona exercícios.
-Com getExercicios, a gente retorna a lista.
+/*Criamos o plano com nome, tipo e ativo. Os métodos permitem acessar os dados do plano.
 
-*/
+ */
 
