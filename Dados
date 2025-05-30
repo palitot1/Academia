@@ -23,7 +23,7 @@ public class AlunoRepository {
         return null;
     }
 
-    public List<Aluno> listarTodos() {
+public List<Aluno> listarTodos() {
         return alunos;
     }
 }
