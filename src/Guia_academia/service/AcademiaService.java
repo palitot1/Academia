@@ -7,6 +7,8 @@ import Guia_academia.model.FichaTreino;
 import Guia_academia.model.Plano;
 import Guia_academia.repository.AlunoRepository;
 
+/*Aqui usamos o repositório para acessar os dados dos alunos.*/
+
 public class AcademiaService {
     private AlunoRepository repo = new AlunoRepository();
 

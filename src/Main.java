@@ -1,3 +1,18 @@
+/*
+Visão geral: O que o sistema faz?
+Esse sistema permite que um administrador de academia:
+
+Cadastre alunos.
+
+Atribua planos (mensal, anual).
+
+Crie fichas de treino com exercícios.
+
+Consulte os dados de um aluno
+*/
+
+
+
 import Guia_academia.model.Aluno;
 import Guia_academia.model.FichaTreino;
 import Guia_academia.model.Plano;
@@ -21,7 +36,7 @@ public class Main {
             System.out.print("Escolha uma opção: ");
             opcao = sc.nextInt();
             sc.nextLine();
-
+                /*Menu de opções com switch.*/
             switch (opcao) {
                 case 1:
                     System.out.print("Nome do aluno: ");
