@@ -1,0 +1,33 @@
+package Guia_academia.service;
+
+import model.Aluno;
+import model.FichaTreino;
+import model.Plano;
+import repository.AlunoRepository;
+
+public class AcademiaService {
+    private AlunoRepository repo = new AlunoRepository();
+
+    public void cadastrarAluno(String nome, String cpf) {
+        Aluno aluno = new Aluno(nome, cpf);
+        repo.salvar(aluno);
+    }
+
+    public void atribuirPlano(String cpf, Plano plano) {
+        Aluno aluno = repo.buscarPorCpf(cpf);
+        if (aluno != null) {
+            aluno.setPlano(plano);
+        }
+    }
+
+    public void adicionarFicha(String cpf, FichaTreino ficha) {
+        Aluno aluno = repo.buscarPorCpf(cpf);
+        if (aluno != null) {
+            aluno.setFicha(ficha);
+        }
+    }
+
+    public Aluno consultarAluno(String cpf) {
+        return repo.buscarPorCpf(cpf);
+    }
+}
