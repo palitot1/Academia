@@ -1,0 +1,27 @@
+package Guia_academia.model;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*Importamos List e ArrayList para guardar os exercícios de treino.*/
+
+public class FichaTreino {
+    private List<String> exercicios = new ArrayList<>();
+
+    /*A ficha é basicamente uma lista de exercícios.*/
+
+    public void adicionarExercicio(String exercicio) {
+        exercicios.add(exercicio);
+    }
+
+    public List<String> getExercicios() {
+        return exercicios;
+    }
+}
+
+/*Com adicionarExercicio, a gente adiciona exercícios.
+Com getExercicios, a gente retorna a lista.
+
+*/
+
